@@ -75,12 +75,6 @@ const onClickSquare = (index) => {
   //ひっくり返せる石の数を取得
   const reversibleStones = getReversibleStones(index);
 
-  //他の石があるか、置いたときにひっくり返せる石がない場合は置けないメッセージを出す
-  if (stoneStateList[index] !== 0 || !reversibleStones.length) {
-    alert("ここには置けないよ！");
-    return;
-  }
-
   //自分の石を置く 
   stoneStateList[index] = currentColor;
   document
